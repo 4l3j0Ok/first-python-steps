@@ -1,23 +1,13 @@
 def anagramas_unicos(lista):
-
-    item1 = lista[0]
-    item2 = lista[1]
-    item3 = lista[2]
-    
-    item1sort = sorted(item1)
-    item2sort = sorted(item2)
-    item3sort = sorted(item3)
-
-    if item1sort == item2sort:
-        nuevalista = [item1, item3]
+    if sorted(lista[0]) == sorted(lista[1]):
+        nuevalista = [lista[0], lista[2]]
         print(nuevalista)
-        
-    elif item1sort == item3sort or item2sort == item3sort:
-        nuevalista2 = [item1, item2]
-        print(nuevalista2)
-        
+
+    elif sorted(lista[0]) == sorted(lista[2]) or sorted(lista[1]) == sorted(lista[2]):
+        nuevalista = [lista[0], lista[1]]
+        print(nuevalista)
+
     else:
         print(lista)
 
 anagramas_unicos(["isla", "pan", "lisa"])
-
